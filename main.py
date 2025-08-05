@@ -14,7 +14,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-df = pd.read_csv("data/spotify.csv")
+df = pd.read_csv("data/SpotifyFeatures.csv")
 
 @app.get("/recommend")
 def recommend(mood: str = Query(..., description="User mood e.g. happy, sad")):
